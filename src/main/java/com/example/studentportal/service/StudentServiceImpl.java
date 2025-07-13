@@ -53,12 +53,7 @@ public class  StudentServiceImpl implements StudentService {
         studentRepository.deleteById(id);
     }
     
-    /**
-     * Creates and saves a Student entity from a StudentRequestDTO, auto-generating the name.
-     * Handles invalid or missing department/program gracefully.
-     * @param studentRequestDTO the DTO containing student info
-     * @return the saved Student entity
-     */
+    
     public Student saveStudentFromDTO(StudentRequestDTO studentRequestDTO) {
         String randomName = "Student" + System.currentTimeMillis(); // Auto-generate name
         Department department = null;
